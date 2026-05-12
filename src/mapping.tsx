@@ -1,20 +1,21 @@
-import React from 'react';
-import Slide00 from './Slide00';
-import Slide01 from './Slide01';
-import Slide02 from './Slide02';
-import Slide03 from './Slide03';
-import Slide04 from './Slide04';
-import Slide05 from './Slide05';
-import Slide06 from './Slide06';
-import Slide07 from './Slide07';
-import Slide08 from './Slide08';
-import Slide09 from './Slide09';
-import Slide10 from './Slide10';
-import Slide11 from './Slide11';
-import Slide12 from './Slide12';
-import Slide13 from './Slide13';
-import Slide14 from './Slide14';
-import Slide15 from './Slide15';
+import React, { lazy } from 'react';
+
+const Slide00 = lazy(() => import('./Slide00'));
+const Slide01 = lazy(() => import('./Slide01'));
+const Slide02 = lazy(() => import('./Slide02'));
+const Slide03 = lazy(() => import('./Slide03'));
+const Slide04 = lazy(() => import('./Slide04'));
+const Slide05 = lazy(() => import('./Slide05'));
+const Slide06 = lazy(() => import('./Slide06'));
+const Slide07 = lazy(() => import('./Slide07'));
+const Slide08 = lazy(() => import('./Slide08'));
+const Slide09 = lazy(() => import('./Slide09'));
+const Slide10 = lazy(() => import('./Slide10'));
+const Slide11 = lazy(() => import('./Slide11'));
+const Slide12 = lazy(() => import('./Slide12'));
+const Slide13 = lazy(() => import('./Slide13'));
+const Slide14 = lazy(() => import('./Slide14'));
+const Slide15 = lazy(() => import('./Slide15'));
 
 export const slideComponentMap: { [key: number]: React.ComponentType<{ setSlide?: (n: number) => void }> } = {
     0: Slide00,
