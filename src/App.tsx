@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { PROGNUM_LOGO } from './assets/logo';
 import {
   ChevronLeft,
   ChevronRight,
@@ -64,7 +63,7 @@ export default function App() {
   return (
     <div className="flex h-screen bg-bg-dark text-white font-sans overflow-hidden relative items-center justify-center">
       {/* Progress Bar */}
-      <motion.div 
+      <motion.div
         className="absolute top-0 left-0 h-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-red z-50 shadow-[0_0_10px_rgba(34,211,238,0.8)]"
         initial={{ width: 0 }}
         animate={{ width: `${((currentSlide + 1) / SLIDES.length) * 100}%` }}
@@ -72,7 +71,7 @@ export default function App() {
       />
 
       {/* Animated Mesh Background with Spotlight */}
-      <div 
+      <div
         className="absolute inset-0 opacity-40 pointer-events-none transition-opacity duration-300"
         style={{
           background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(34, 211, 238, 0.15), transparent 40%)`
@@ -89,12 +88,6 @@ export default function App() {
         {/* Header */}
         <header className="flex justify-between items-center px-12 py-8 shrink-0">
           <div className="flex items-center gap-4">
-            <img
-              src={PROGNUM_LOGO}
-              alt="Prognum Logo"
-              className="h-8 w-auto object-contain"
-              referrerPolicy="no-referrer"
-            />
             <span className="text-xl font-bold tracking-tight uppercase font-display bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
               Prognum
             </span>
